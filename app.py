@@ -12,7 +12,6 @@ import plotly.express as px     # Gráficos interactivos
 # ----------------------- Configuración general de la página -----------------
 st.set_page_config(
     page_title="Desempeño de colaboradores | Socialize your knowledge",
-    page_icon="📊",
     layout="wide",
 )
 
@@ -31,7 +30,7 @@ datos = cargar_datos()
 # =============================================================================
 # SECCIÓN 1. CÓDIGO PARA DESPLEGAR EL TÍTULO Y LA DESCRIPCIÓN DE LA APLICACIÓN
 # =============================================================================
-st.title("📊 Análisis del desempeño de los colaboradores")
+st.title("Análisis del desempeño de los colaboradores")
 st.markdown(
     """
     Bienvenido(a) al **cuadro de mando de Socialize your knowledge**.
@@ -211,7 +210,7 @@ with fila2_col2:
 # =============================================================================
 # SECCIÓN 10. CÓDIGO PARA DESPLEGAR LAS CONCLUSIONES DEL ANÁLISIS
 # =============================================================================
-st.header("📝 Conclusión del análisis")
+st.header("Conclusión del análisis")
 
 # Cálculos dinámicos que se adaptan a los filtros seleccionados
 promedio_desempeno = datos_filtrados["performance_score"].mean()
@@ -229,7 +228,7 @@ st.markdown(
     Con base en los **{len(datos_filtrados)} colaboradores** que cumplen con los
     filtros seleccionados, se concluye lo siguiente:
 
-    **💪 Fortalezas**
+    **Fortalezas**
     - El **{pct_alto_desempeno:.1f}%** del personal analizado alcanza un puntaje
       de desempeño de 3 o más (*Fully Meets* o *Exceeds*), lo que refleja un
       equipo mayoritariamente comprometido con sus objetivos.
@@ -237,7 +236,7 @@ st.markdown(
       nivel promedio de satisfacción es de **{promedio_satisfaccion:.2f}**
       (escala 1 a 5), indicadores de un clima laboral estable.
 
-    **🔍 Áreas de oportunidad**
+    **Áreas de oportunidad**
     - La correlación entre horas trabajadas y desempeño es de
       **{correlacion_horas_desempeno:.2f}**, es decir, trabajar más horas
       (promedio actual: **{promedio_horas:,.0f} horas mensuales**) **no garantiza
@@ -250,7 +249,7 @@ st.markdown(
       entre géneros y grupos de edad; cualquier brecha detectada debe revisarse
       con el área de Recursos Humanos.
 
-    ✅ En conjunto, el panel permite a la gerencia identificar de un solo
+    En conjunto, el panel permite a la gerencia identificar de un solo
     vistazo el estado del equipo y tomar decisiones informadas para mejorar el
     desempeño del Área de Marketing de *Socialize your knowledge*.
     """
