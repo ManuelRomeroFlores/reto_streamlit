@@ -101,7 +101,7 @@ if estado_civil_seleccionado != "Todos":
     ]
 
 # ----------------------- Indicadores clave (KPIs) ----------------------------
-st.header("📌 Indicadores clave del personal filtrado")
+st.header("Indicadores clave del personal filtrado")
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Colaboradores", len(datos_filtrados))
 col2.metric("Desempeño promedio", f"{datos_filtrados['performance_score'].mean():.2f}" if len(datos_filtrados) else "—")
@@ -110,13 +110,13 @@ col4.metric("Satisfacción promedio", f"{datos_filtrados['satisfaction_level'].m
 
 # Advertencia si los filtros no arrojan resultados
 if datos_filtrados.empty:
-    st.warning("⚠️ No hay colaboradores que cumplan con los filtros seleccionados. Ajusta los controles de la barra lateral.")
+    st.warning("No hay colaboradores que cumplan con los filtros seleccionados. Ajusta los controles de la barra lateral.")
     st.stop()
 
 # =============================================================================
 # APARTADO DE GRÁFICAS Y VISUALIZACIONES DE DESEMPEÑO
 # =============================================================================
-st.header("📈 Visualizaciones de desempeño")
+st.header("Visualizaciones de desempeño")
 
 fila1_col1, fila1_col2 = st.columns(2)
 fila2_col1, fila2_col2 = st.columns(2)
